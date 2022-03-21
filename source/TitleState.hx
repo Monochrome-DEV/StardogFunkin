@@ -106,7 +106,7 @@ class TitleState extends MusicBeatState
 		}
 		#end*/
 		
-		#if CHECK_FOR_UPDATES
+	/*	#if CHECK_FOR_UPDATES
 		if(!closedState) {
 			trace('checking for update');
 			var http = new haxe.Http("https://raw.githubusercontent.com/ShadowMario/FNF-PsychEngine/main/gitVersion.txt");
@@ -128,7 +128,7 @@ class TitleState extends MusicBeatState
 			
 			http.request();
 		}
-		#end
+		#end	*/
 
 		FlxG.game.focusLostFramerate = 60;
 		FlxG.sound.muteKeys = muteKeys;
@@ -448,7 +448,7 @@ class TitleState extends MusicBeatState
 				new FlxTimer().start(1, function(tmr:FlxTimer)
 				{
 					if (mustUpdate) {
-						MusicBeatState.switchState(new OutdatedState());
+						MusicBeatState.switchState(new MainMenuState());
 					} else {
 						MusicBeatState.switchState(new MainMenuState());
 					}
